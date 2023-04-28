@@ -147,4 +147,12 @@ git commit -m "Initial commit"
 git push -u origin main
 ```
 
+## NOTE
 
+If you are on Mac OS X and wondering why git isn't using your local user.name, it's very likely because you are using the https mode of GitHub and the OS X Keychain. Read more about it [here](https://docs.github.com/en/get-started/getting-started-with-git/updating-credentials-from-the-macos-keychain). But the bottom line is to delete the github.com references from your osxchain:
+
+```
+git credential-osxkeychain erase
+```
+
+Then switch to using ssh following this how-to document.
